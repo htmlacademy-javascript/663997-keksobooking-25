@@ -2,7 +2,6 @@
 
 * Студент: [Алексей Родионов](https://up.htmlacademy.ru/javascript/25/user/663997).
 * Наставник: [Александр Палян](https://htmlacademy.ru/profile/id1231107).
-)
 
 ---
 
