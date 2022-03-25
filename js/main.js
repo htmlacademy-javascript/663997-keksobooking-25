@@ -26,25 +26,14 @@ const getRandomFloat = function(min, max, accuracy) {
   return Math.abs(rand.toFixed (accuracy > 16 || accuracy < -16 ? 16 : Math.abs(accuracy)));
 };
 
-const rndPhotos = function () {
-  const photosArr = [];
-  for (let i = 0; i < photos.length; i++){
+const rndArrey = function (arr) {
+  const rndArr = [];
+  for (let i = 0; i < arr.length; i++){
     if (getRandomInt(0, 10) > 4){
-      photosArr.push (photos[i]);
+      rndArr.push (arr[i]);
     }
   }
-  return photosArr;
-};
-
-
-const rndFeatures = function () {
-  const featuresArr = [];
-  for (let i = 0; i < features.length; i++){
-    if (getRandomInt(0, 10) > 3){
-      featuresArr.push (features[i]);
-    }
-  }
-  return featuresArr;
+  return rndArr;
 };
 
 const getArr = function(length){
@@ -66,9 +55,9 @@ const getArr = function(length){
         guests: getRandomInt(1,125),
         checkin: times[getRandomInt(0,2)],
         checkout: times[getRandomInt(0,2)],
-        features: rndFeatures(),
+        features: rndArrey(features),
         description: 'Описание помещения',
-        photos: rndPhotos(),
+        photos: rndArrey(photos),
       },
       location: {
         lat: rndAdress [0],
