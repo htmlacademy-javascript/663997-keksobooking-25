@@ -26,21 +26,26 @@ const getRandomFloat = function(min, max, accuracy) {
   return Math.abs(rand.toFixed (accuracy > 16 || accuracy < -16 ? 16 : Math.abs(accuracy)));
 };
 
-const rndPhotos = function (min, max)  {
-  const photosArr = photos.slice(min > max ? (max, min) : (min, max));
+const rndPhotos = function () {
+  const photosArr = [];
+  for (let i = 0; i < photos.length; i++){
+    if (getRandomInt(0, 10) > 4){
+      photosArr.push (photos[i]);
+    }
+  }
   return photosArr;
 };
 
-const rndFeatures = function (min, max){
-  const featuresArr = features.slice(min > max ? (max, min) : (min, max));
+
+const rndFeatures = function () {
+  const featuresArr = [];
+  for (let i = 0; i < features.length; i++){
+    if (getRandomInt(0, 10) > 3){
+      featuresArr.push (features[i]);
+    }
+  }
   return featuresArr;
 };
-// getUniqueRandom (0, getRandomInt(0, 5))
-
-
-// getUniqueRandom
-
-// Обратите внимание, в тексте задания вы будете встречать текст в фигурных скобках. Такой текст будет означать, что на месте этого текста должно появиться значение, которое вы возьмёте из данных. Например, в шаблоне может быть написано <div>{{x}}</div>, и это будет значить, что {{x}} нужно заменить на значение переменной x. Если переменная будет равна 100, то разметка должна выглядеть как <div>100</div>. Фигурные скобки в этой записи ничего не значат, они просто показывают, что закончилась разметка и в этом месте будут стоять данные. Сами фигурные скобки переносить в разметку не нужно.
 
 const getArr = function(length){
   const arr =[];
@@ -61,9 +66,9 @@ const getArr = function(length){
         guests: getRandomInt(1,125),
         checkin: times[getRandomInt(0,2)],
         checkout: times[getRandomInt(0,2)],
-        features: rndFeatures (getRandomInt(0, 5), getRandomInt(0, 5)),
+        features: rndFeatures(),
         description: 'Описание помещения',
-        photos: rndPhotos(getRandomInt(0, 2), getRandomInt(0, 2)),
+        photos: rndPhotos(),
       },
       location: {
         lat: rndAdress [0],
