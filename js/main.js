@@ -1,2 +1,2 @@
-import {newArr} from './utilits.js';
+import {newArr} from './data.js';
 console.log (newArr);
