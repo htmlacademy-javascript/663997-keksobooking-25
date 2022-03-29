@@ -2,8 +2,8 @@ import {
   getRandomFloat,
   rndArrey,
   getRandomInt
-}
-  from './utilits.js';
+} from './utilits.js';
+
 const data = {
   ARR_LENGTH: 10,
   typesOfPalaces: [
