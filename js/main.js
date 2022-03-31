@@ -1,2 +1,4 @@
 import {newArr} from './data.js';
-console.log (newArr);
+import  './get-elements.js';
+// console.log (newArr);
+
