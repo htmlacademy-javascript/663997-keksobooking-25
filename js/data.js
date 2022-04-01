@@ -34,7 +34,7 @@ const getArr = function (length) {
       offer: {
         title: 'Заголовок',
         address: `${rndAdress[0]}, ${rndAdress[1]}`,
-        price: getRandomInt(15000, 25000),
+        price: getRandomInt(5000, 25000),
         type: data.typesOfPalaces[getRandomInt(0, 4)],
         rooms: getRandomInt(1, 15),
         guests: getRandomInt(1, 125),
