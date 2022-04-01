@@ -1,2 +1,4 @@
-import {newArr} from './data.js';
-console.log (newArr);
+import  {addUsersCards} from './get-elements.js';
+document.addEventListener ('DOMContentLoaded' , addUsersCards());
+
+
