@@ -1,8 +1,8 @@
-import {addUsersCards} from './get-elements.js';
 import {disablePage, enablePage} from './disable-page.js';
 
-document.addEventListener ('DOMContentLoaded' , addUsersCards());
+const main = function () {
+  disablePage();
+  setTimeout(enablePage, 5000);
+};
 
-disablePage();
-setTimeout(enablePage, 5000);
-
+document.addEventListener ('DOMContentLoaded' , main());
