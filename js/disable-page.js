@@ -1,10 +1,10 @@
 import {addUsersCards} from './get-elements.js';
 
-const form = document.querySelector ('.ad-form');
-const mapFilters = document.querySelector ('.map__filters');
-const fieldsetsAll = document.querySelectorAll('fieldset');
-
 const disablePage = function () {
+  const form = document.querySelector ('.ad-form');
+  const mapFilters = document.querySelector ('.map__filters');
+  const fieldsetsAll = document.querySelectorAll('fieldset');
+
   form.classList.add('ad-form--disabled');
   mapFilters.classList.add('ad-form--disabled');
   for (let i =0 ; i < fieldsetsAll.length; i++){
@@ -13,6 +13,10 @@ const disablePage = function () {
 };
 
 const enablePage = function () {
+  const form = document.querySelector ('.ad-form');
+  const mapFilters = document.querySelector ('.map__filters');
+  const fieldsetsAll = document.querySelectorAll('fieldset');
+
   form.classList.remove('ad-form--disabled');
   mapFilters.classList.remove('ad-form--disabled');
   for (let i =0 ; i < fieldsetsAll.length; i++){

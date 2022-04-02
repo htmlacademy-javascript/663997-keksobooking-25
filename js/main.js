@@ -5,4 +5,4 @@ const main = function () {
   setTimeout(enablePage, 5000);
 };
 
-document.addEventListener ('DOMContentLoaded' , main());
+document.addEventListener ('DOMContentLoaded', main());
